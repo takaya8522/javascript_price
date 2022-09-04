@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DIC cafe</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/sale.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section class="section_inner">
+      <div class="section_title">
+        <h1>コーヒー豆販売</h1>
+      </div>
+    </section>
+
+    <section class="section_inner menu_section">
+      <div class="center">
+        <h1 class="menu_title">ラインナップ</h1>
+      </div>
+      <ul class="menu_list coffee_menu">
+        <li class="caffee_menu_list_item">
+          <div class="caffee_menu_content">
+            <h2 class="menu_item_title">オリジナルブレンド200g</h2>
+            <p class="caffee_menu_price">500円</p>
+          </div>
+          <img src="images/sample_cafe1.jpg" class="caffee_menu_image">
+        </li>
+        <li class="caffee_menu_list_item">
+          <div class="caffee_menu_content">
+            <h2 class="menu_item_title">オリジナルブレンド500g</h2>
+            <p class="caffee_menu_price">900円</p>
+          </div>
+          <img src="images/sample_cafe1.jpg" class="caffee_menu_image">
+        </li>
+        <li class="caffee_menu_list_item">
+          <div class="caffee_menu_content">
+            <h2 class="menu_item_title">スペシャルブレンド200g</h2>
+            <p class="caffee_menu_price">700円</p>
+          </div>
+          <img src="images/sample_cafe3.jpg" class="caffee_menu_image">
+        </li>
+        <li class="caffee_menu_list_item">
+          <div class="caffee_menu_content">
+            <h2 class="menu_item_title">スペシャルブレンド500g</h2>
+            <p class="caffee_menu_price">1200円</p>
+          </div>
+          <img src="images/sample_cafe3.jpg" class="caffee_menu_image">
+        </li>
+      </ul>
+      <h2>送料のご案内</h2>
+      <ul>
+        <li>合計金額が2000円未満で送料500円</li>
+        <li>2000円以上で250円</li>
+        <li>3000円以上で無料</li>
+      </ul>
+    </section>
+
+    <section class="section_inner">
+      <h2>ご注文</h2>
+      <form>
+        <p>商品を選択してください</p>
+        <div>
+          <select id="product" required>
+            <option hidden value="0">選択してください</option>
+            <option value="1">オリジナルブレンド200g 500円</option>
+            <option value="2">オリジナルブレンド500g 900円</option>
+            <option value="3">スペシャルブレンド200g 700円</option>
+            <option value="4">スペシャルブレンド500g 1200円</option>
+          </select>
+          <p>数量を選択してください</p>
+          <input type="number" min="1" max="5" id="number" required>
+        </div>
+        <br>
+        <input type="button" class="btn" value="追加" onclick="add()">
+        <input type="button" class="btn" value="合計金額" onclick="calc()">
+      </form>
+    </section>
+    <script type="text/javascript" src="javascripts/sale.js"></script>
+  </body>
+</html>
